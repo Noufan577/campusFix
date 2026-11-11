@@ -8,17 +8,18 @@ interface HeaderProps {
 export default function Header({ activeTab = "home" }: HeaderProps) {
   return (
     <header className="w-full bg-white border-b border-[#efefeb]">
-      <div className="max-w-[1024px] mx-auto h-[68px] px-6 sm:px-12 md:px-[61px] flex items-center justify-between">
+      <div className="max-w-[1240px] mx-auto h-[68px] px-6 sm:px-8 md:px-12 flex items-center justify-between">
         {/* Brand Logo & Name */}
         <Link href="/" className="flex items-center gap-3 select-none">
-          <div className="relative w-[38px] h-[26px] flex-shrink-0">
+          <div className="relative w-[36px] h-[28px] flex-shrink-0 flex items-center justify-center">
             <Image
               src="/logo.png"
               alt="CampusFix Logo"
-              width={38}
-              height={26}
+              width={36}
+              height={28}
               priority
-              className="object-contain"
+              style={{ width: "auto", height: "auto" }}
+              className="max-w-full max-h-full object-contain"
             />
           </div>
           <span className="text-[24px] font-bold leading-none tracking-tight">
@@ -76,4 +77,3 @@ export default function Header({ activeTab = "home" }: HeaderProps) {
     </header>
   );
 }
-
